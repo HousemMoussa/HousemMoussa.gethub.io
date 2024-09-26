@@ -58,6 +58,12 @@
             padding: 1rem;
             margin-top: 1rem;
         }
+        .contact-info {
+            margin-top: 1rem;
+        }
+        .contact-info p {
+            margin: 0.5rem 0;
+        }
     </style>
 </head>
 <body>
@@ -113,22 +119,41 @@
         </div>
     </div>
 
-    <section id="contact" class="section">
+    <div id="contact" class="section">
         <div class="container">
             <h2>Contact Me</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Message" rows="5" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:moussahousem13@gmail.com">moussahousem13@gmail.com</a></p>
+                <p>Phone: +44 7429153043</p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/housem-moussa" target="_blank">linkedin.com/in/housem-moussa</a></p>
+            </div>
         </div>
-    </section>
+    </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Housem Moussa. All rights reserved.</p>
-        </div>
-    </footer>
+    <div class="container">
+        <p>© 2024 Housem Moussa. All rights reserved.</p>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        $(document).ready(function(){
+            $("a").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+
+        // Toggle project details
+        function toggleProject(id) {
+            $('#' + id).slideToggle();
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASTOVL Aerodynamics Flight Model - Housem Moussa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .equation {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>ASTOVL Aerodynamics Flight Model</h1>
+    
+    <div class="section">
+        <h2>Project Overview</h2>
+        <p>This project focused on developing a comprehensive aerodynamics model and simulation framework for an Advanced Short Take-Off and Vertical Landing (ASTOVL) lift-fan aircraft. The model encompasses power-off aerodynamic forces and moments, propulsion system-induced aerodynamic effects, and unpowered in-ground effects, specifically targeting low-speed flight regimes (Mach number M ≈ 0.2).</p>
+    </div>
+
+    <div class="section">
+        <h2>Aircraft Description</h2>
+        <img src="/api/placeholder/600/400" alt="ASTOVL lift-fan aircraft">
+        <p>The aircraft is a single-place, single-engine fighter/attack aircraft with a wing-canard arrangement and twin vertical tails. It features a remote lift fan interconnected with a lift cruise turbofan engine, allowing for vertical take-off and landing capabilities.</p>
+    </div>
+
+    <div class="section">
+        <h2>Key Equations</h2>
+        <h3>Longitudinal Aerodynamics</h3>
+        <p>Lift:</p>
+        <div class="equation">L = C<sub>L</sub>q̄S + ΔL<sub>T</sub>T</div>
+        <p>Drag:</p>
+        <div class="equation">D = C<sub>D</sub>q̄S</div>
+        <p>Pitching moment:</p>
+        <div class="equation">PM = C<sub>m</sub>q̄Sc̄ + ΔPM<sub>Tde</sub>T<sub>de</sub> + (Lcosα + Dsinα)X<sub>MRC</sub> + (Lsinα - Dcosα)Z<sub>MRC</sub></div>
+        
+        <h3>Lateral Directional Aerodynamics</h3>
+        <p>Side force:</p>
+        <div class="equation">FY = C<sub>y</sub>q̄S</div>
+        <p>Rolling Moment:</p>
+        <div class="equation">RM = C<sub>l</sub>q̄Sb + ΔRM<sub>Tde</sub>T<sub>de</sub> + FYZ<sub>MRC</sub></div>
+        <p>Yawing Moment:</p>
+        <div class="equation">YM = C<sub>n</sub>q̄Sb + FYX<sub>MRC</sub></div>
+    </div>
+
+    <div class="section">
+        <h2>Implementation</h2>
+        <p>The aerodynamics model was implemented using MATLAB and Simulink. The MATLAB code contains all the necessary data and equations, while Simulink provides a block diagram environment for multidomain simulation and Model-Based Design.</p>
+        <img src="/api/placeholder/600/400" alt="Simulink model diagram">
+    </div>
+
+    <div class="section">
+        <h2>Key Findings</h2>
+        <ul>
+            <li>The angle of attack significantly influences the pitching moment, with oscillations in AoA creating corresponding oscillations in the pitching moment.</li>
+            <li>The sideslip angle has a substantial impact on side force, yawing moment, and rolling moment.</li>
+            <li>Increasing speed automatically intensifies drag, as expected.</li>
+            <li>In hover-to-forward flight transitions, scalar variations in forces were observed due to changes in speed and nozzle angle.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Conclusion</h2>
+        <p>The development of this aerodynamic model using MATLAB & Simulink allowed for comprehensive testing of the ASTOVL aircraft. The model provides valuable insights into the aircraft's behavior during transition and hover flight phases, focusing on low-speed aerodynamics. This project serves as a foundation for future investigations into ASTOVL situations and can be further enhanced by introducing wind forces and integrating with advanced flight simulators.</p>
+    </div>
+
+    <a href="index.html">Back to Portfolio</a>
+</body>
+</html>

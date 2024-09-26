@@ -3,154 +3,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Housem Moussa - Aerospace Engineer Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
-        body, html {
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
         }
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            background-color: #fff;
-            padding: 20px 0;
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 1rem;
         }
         .logo {
-            font-size: 24px;
+            float: left;
+            font-size: 1.5rem;
             font-weight: bold;
         }
+        .nav-links {
+            float: right;
+        }
         .nav-links a {
-            margin-left: 20px;
-            text-decoration: none;
             color: #333;
-        }
-        .hero {
-            background-color: #f5f5f5;
-            text-align: center;
-            padding: 100px 0;
-        }
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-        .hero p {
-            font-size: 24px;
-            max-width: 600px;
-            margin: 0 auto;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
         }
         .section {
-            padding: 80px 0;
+            padding: 2rem 0;
         }
-        .section h2 {
-            font-size: 36px;
-            margin-bottom: 40px;
+        .hero {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 3rem 0;
         }
         .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
         .project {
-            background-color: #fff;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            padding: 20px;
-            border-radius: 8px;
+            flex-basis: calc(33.333% - 1rem);
+            margin-bottom: 2rem;
+            cursor: pointer;
         }
         .project img {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 20px;
+            height: auto;
         }
-        .contact-form {
-            max-width: 500px;
-            margin: 0 auto;
-        }
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        .contact-form button {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
+        .project-details {
+            display: none;
+            background-color: #f4f4f4;
+            padding: 1rem;
+            margin-top: 1rem;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Housem Moussa</div>
-                <div class="nav-links">
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
-                </div>
-            </nav>
+    <div class="container">
+        <div class="logo">Housem Moussa</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </div>
-    </header>
+    </div>
 
-    <section class="hero">
+    <div class="section hero">
         <div class="container">
             <h1>Innovative Solutions in Engineering and Technology</h1>
             <p>Aerospace Engineer | MEng Graduate | Problem Solver</p>
         </div>
-    </section>
+    </div>
 
-    <section id="about" class="section">
+    <div id="about" class="section">
         <div class="container">
             <h2>About Me</h2>
             <p>A highly motivated MEng Aerospace Engineering graduate with a strong passion for research and proven skills in independent study. Seeking to pursue a career as a Flight Dynamics Engineer, Systems Engineer, Structural Engineer, or Design Engineer. Bilingual in Italian and Arabic, fluent in English, and a strong command of Spanish.</p>
         </div>
-    </section>
+    </div>
 
-    <section id="projects" class="section">
+    <div id="projects" class="section">
         <div class="container">
             <h2>Featured Projects</h2>
             <div class="projects">
-                <div class="project">
+                <div class="project" onclick="toggleProject('drone')">
                     <img src="/api/placeholder/300/200" alt="Aerial Surveillance Drone">
                     <h3>Aerial Surveillance Drone</h3>
-                    <p>Engineered a quadrotor drone for ecological research, optimized for capturing high-resolution imagery of remote puffin islands.</p>
+                    <div id="drone" class="project-details">
+                        <p>Engineered a quadrotor drone for ecological research, optimized for capturing high-resolution imagery of remote puffin islands. This UAV was designed to conduct precise aerial surveys, quantify cormorant populations, identify nest locations, and monitor population dynamics. The drone's capabilities were enhanced with an integrated GoPro Hero 9 camera for accurate data collection and ecological analysis.</p>
+                    </div>
                 </div>
-                <div class="project">
+                <div class="project" onclick="toggleProject('hydrogen')">
                     <img src="/api/placeholder/300/200" alt="Hydrogen Generation Process">
                     <h3>Hydrogen Generation Process</h3>
-                    <p>Developed a sustainable energy solution to power Liverpool John Lennon Airport using wind energy and hydrogen generation.</p>
+                    <div id="hydrogen" class="project-details">
+                        <p>Developed a sustainable energy solution to power Liverpool John Lennon Airport using wind energy and hydrogen generation. The project focused on efficient hydrogen production, ensuring year-round energy supply, implementing redundancy planning, and comprehensive airport powering. This innovative approach significantly reduced carbon emissions and successfully integrated with existing renewable energy sources.</p>
+                    </div>
                 </div>
-                <div class="project">
+                <div class="project" onclick="toggleProject('astovl')">
                     <img src="/api/placeholder/300/200" alt="ASTOVL Aerodynamics Flight Model">
                     <h3>ASTOVL Aerodynamics Flight Model</h3>
-                    <p>Created a comprehensive aerodynamics model and simulation framework for low-speed flight regimes, focusing on transition and hover flight conditions.</p>
+                    <div id="astovl" class="project-details">
+                        <p>Created a comprehensive aerodynamics model and simulation framework for low-speed flight regimes, focusing on transition and hover flight conditions. The project encompassed power-off aerodynamic forces and moments, propulsion system-induced aerodynamic effects, and unpowered in-ground effects. This model enables accurate analysis and prediction of aircraft behavior during critical flight phases, contributing to advanced ASTOVL (Advanced Short Take-Off and Vertical Landing) technology development.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <section id="contact" class="section">
         <div class="container">

@@ -90,7 +90,7 @@
         </div>
     </div>
 
-    <div id="projects" class="section">
+<div id="projects" class="section">
         <div class="container">
             <h2>Featured Projects</h2>
             <div class="projects">
@@ -108,16 +108,19 @@
                         <p>Developed a sustainable energy solution to power Liverpool John Lennon Airport using wind energy and hydrogen generation. The project focused on efficient hydrogen production, ensuring year-round energy supply, implementing redundancy planning, and comprehensive airport powering. This innovative approach significantly reduced carbon emissions and successfully integrated with existing renewable energy sources.</p>
                     </div>
                 </div>
-                <div class="project" onclick="toggleProject('astovl')">
-                    <img src="/api/placeholder/300/200" alt="ASTOVL Aerodynamics Flight Model">
-                    <h3>ASTOVL Aerodynamics Flight Model</h3>
+                <div class="project">
+                    <a href="astovl-project.html">
+                        <img src="/api/placeholder/300/200" alt="ASTOVL Aerodynamics Flight Model">
+                        <h3>ASTOVL Aerodynamics Flight Model</h3>
+                    </a>
                     <div id="astovl" class="project-details">
-                        <p>Created a comprehensive aerodynamics model and simulation framework for low-speed flight regimes, focusing on transition and hover flight conditions. The project encompassed power-off aerodynamic forces and moments, propulsion system-induced aerodynamic effects, and unpowered in-ground effects. This model enables accurate analysis and prediction of aircraft behavior during critical flight phases, contributing to advanced ASTOVL (Advanced Short Take-Off and Vertical Landing) technology development.</p>
+                        <p>Created a comprehensive aerodynamics model and simulation framework for low-speed flight regimes, focusing on transition and hover flight conditions. Click to learn more about this project.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <div id="contact" class="section">
         <div class="container">

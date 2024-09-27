@@ -101,9 +101,10 @@
                         <p>Engineered a quadrotor drone for ecological research, optimized for capturing high-resolution imagery of remote puffin islands. This UAV was designed to conduct precise aerial surveys, quantify cormorant populations, identify nest locations, and monitor population dynamics. The drone's capabilities were enhanced with an integrated GoPro Hero 9 camera for accurate data collection and ecological analysis.</p>
                     </div>
                 </div>
-                <div class="project" onclick="toggleProject('hydrogen')">
-                    <img src="/api/placeholder/300/200" alt="Hydrogen Generation Process">
-                    <h3>Hydrogen Generation Process</h3>
+                <div class="project">
+                    <a href="hydrogen-project.html">
+                        <img src="/api/placeholder/300/200" alt="Hydrogen Generation Process">
+                        <h3>Hydrogen Generation Process</h3>
                     <div id="hydrogen" class="project-details">
                         <p>Developed a sustainable energy solution to power Liverpool John Lennon Airport using wind energy and hydrogen generation. The project focused on efficient hydrogen production, ensuring year-round energy supply, implementing redundancy planning, and comprehensive airport powering. This innovative approach significantly reduced carbon emissions and successfully integrated with existing renewable energy sources.</p>
                     </div>

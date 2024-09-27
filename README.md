@@ -25,9 +25,9 @@
         
         .container {
             width: 80%;
+            max-width: 1200px;
             margin: auto;
-            overflow: hidden;
-            padding: 1rem;
+            padding: 0 1rem;
         }
         
         header {
@@ -37,17 +37,19 @@
             width: 100%;
             z-index: 1000;
             transition: all 0.3s ease;
+            padding: 1rem 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
         .logo {
-            float: left;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: bold;
             color: var(--secondary-color);
-        }
-        
-        .nav-links {
-            float: right;
         }
         
         .nav-links a {
@@ -55,6 +57,7 @@
             text-decoration: none;
             padding: 0.5rem 1rem;
             transition: color 0.3s ease;
+            font-size: 1.1rem;
         }
         
         .nav-links a:hover {
@@ -62,7 +65,7 @@
         }
         
         .section {
-            padding: 5rem 0;
+            padding: 6rem 0;
         }
         
         .hero {
@@ -77,15 +80,16 @@
         
         h1, h2 {
             color: var(--heading-color);
+            margin-bottom: 1.5rem;
         }
         
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
         }
         
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             margin-bottom: 2rem;
         }
         
@@ -98,29 +102,31 @@
             border-radius: 5px;
             text-decoration: none;
             transition: all 0.3s ease;
+            font-size: 1.1rem;
         }
         
         .btn:hover {
             background-color: rgba(100, 255, 218, 0.1);
+            transform: translateY(-3px);
         }
         
         .projects {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
         
         .project {
-            flex-basis: calc(33.333% - 2rem);
-            margin-bottom: 3rem;
             background-color: rgba(10, 25, 47, 0.5);
             border-radius: 10px;
             overflow: hidden;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         
         .project:hover {
             transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
         
         .project img {
@@ -136,19 +142,26 @@
         .project h3 {
             color: var(--heading-color);
             margin-top: 0;
+            font-size: 1.4rem;
         }
         
         .contact-info {
-            margin-top: 1rem;
+            margin-top: 1.5rem;
         }
         
         .contact-info p {
-            margin: 0.5rem 0;
+            margin: 0.8rem 0;
+            font-size: 1.1rem;
         }
         
         .contact-info a {
             color: var(--secondary-color);
             text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-info a:hover {
+            color: var(--heading-color);
         }
         
         footer {
@@ -156,11 +169,23 @@
             padding: 2rem 0;
             background-color: rgba(10, 25, 47, 0.5);
         }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1.2rem;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="container header-content">
             <div class="logo">HM</div>
             <nav class="nav-links">
                 <a href="#about">About</a>
@@ -190,28 +215,31 @@
             <h2>Featured Projects</h2>
             <div class="projects">
                 <div class="project">
-                 <a href="astovl-project.html">
-                    <img src="/api/placeholder/600/400" alt="Aerial Surveillance Drone">
-                    <div class="project-content">
-                        <h3>Aerial Surveillance Drone</h3>
-                        <p>Engineered a quadrotor drone for ecological research, optimized for capturing high-resolution imagery of remote puffin islands. This UAV conducts precise aerial surveys, quantifies cormorant populations, and monitors population dynamics.</p>
-                    </div>
+                    <a href="drone-project.html">
+                        <img src="/api/placeholder/600/400" alt="Aerial Surveillance Drone">
+                        <div class="project-content">
+                            <h3>Aerial Surveillance Drone</h3>
+                            <p>Engineered a quadrotor drone for ecological research, optimized for capturing high-resolution imagery of remote puffin islands. This UAV conducts precise aerial surveys, quantifies cormorant populations, and monitors population dynamics.</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="project">
-                 <a href="hydrogen-project.html">
-                    <img src="/api/placeholder/600/400" alt="Hydrogen Generation Process">
-                    <div class="project-content">
-                        <h3>Hydrogen Generation Process</h3>
-                        <p>Developed a sustainable energy solution to power Liverpool John Lennon Airport using wind energy and hydrogen generation. This innovative approach significantly reduced carbon emissions and successfully integrated with existing renewable energy sources.</p>
-                    </div>
+                    <a href="hydrogen-project.html">
+                        <img src="/api/placeholder/600/400" alt="Hydrogen Generation Process">
+                        <div class="project-content">
+                            <h3>Hydrogen Generation Process</h3>
+                            <p>Developed a sustainable energy solution to power Liverpool John Lennon Airport using wind energy and hydrogen generation. This innovative approach significantly reduced carbon emissions and successfully integrated with existing renewable energy sources.</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="project">
-                 <a href="astovl-project.html">
-                    <img src="/api/placeholder/600/400" alt="ASTOVL Aerodynamics Flight Model">
-                    <div class="project-content">
-                        <h3>ASTOVL Aerodynamics Flight Model</h3>
-                        <p>Created a comprehensive aerodynamics model and simulation framework for low-speed flight regimes, focusing on transition and hover flight conditions for Advanced Short Take-Off and Vertical Landing aircraft.</p>
-                    </div>
+                    <a href="astovl-project.html">
+                        <img src="/api/placeholder/600/400" alt="ASTOVL Aerodynamics Flight Model">
+                        <div class="project-content">
+                            <h3>ASTOVL Aerodynamics Flight Model</h3>
+                            <p>Created a comprehensive aerodynamics model and simulation framework for low-speed flight regimes, focusing on transition and hover flight conditions for Advanced Short Take-Off and Vertical Landing aircraft.</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -257,3 +285,5 @@
             });
         });
     </script>
+</body>
+</html>

@@ -128,7 +128,7 @@
             <div class="contact-info">
                 <p>Email: <a href="mailto:moussahousem13@gmail.com">moussahousem13@gmail.com</a></p>
                 <p>Phone: +44 7429153043</p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/housem-moussa" target="_blank">linkedin.com/in/housem-moussa</a></p>
+                <p>LinkedIn: <a href="https://https://www.linkedin.com/in/housem-moussa-63576415a" target="_blank">linkedin.com/in/housem-moussa</a></p>
             </div>
         </div>
     </div>

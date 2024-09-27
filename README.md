@@ -197,6 +197,7 @@
                     </div>
                 </div>
                 <div class="project">
+                <a href="hydrogen-project.html">
                     <img src="/api/placeholder/600/400" alt="Hydrogen Generation Process">
                     <div class="project-content">
                         <h3>Hydrogen Generation Process</h3>
@@ -204,6 +205,7 @@
                     </div>
                 </div>
                 <div class="project">
+                <a href="astovl-project.html">
                     <img src="/api/placeholder/600/400" alt="ASTOVL Aerodynamics Flight Model">
                     <div class="project-content">
                         <h3>ASTOVL Aerodynamics Flight Model</h3>

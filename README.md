@@ -190,6 +190,7 @@
             <h2>Featured Projects</h2>
             <div class="projects">
                 <div class="project">
+                 <a href="astovl-project.html">
                     <img src="/api/placeholder/600/400" alt="Aerial Surveillance Drone">
                     <div class="project-content">
                         <h3>Aerial Surveillance Drone</h3>
@@ -197,7 +198,7 @@
                     </div>
                 </div>
                 <div class="project">
-                <a href="hydrogen-project.html">
+                 <a href="hydrogen-project.html">
                     <img src="/api/placeholder/600/400" alt="Hydrogen Generation Process">
                     <div class="project-content">
                         <h3>Hydrogen Generation Process</h3>
@@ -205,7 +206,7 @@
                     </div>
                 </div>
                 <div class="project">
-                <a href="astovl-project.html">
+                 <a href="astovl-project.html">
                     <img src="/api/placeholder/600/400" alt="ASTOVL Aerodynamics Flight Model">
                     <div class="project-content">
                         <h3>ASTOVL Aerodynamics Flight Model</h3>
@@ -256,5 +257,3 @@
             });
         });
     </script>
-</body>
-</html>
